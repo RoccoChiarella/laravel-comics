@@ -4,6 +4,22 @@
     box-sizing: border-box;
 }
 
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.text-upper{
+    text-transform: uppercase;
+}
+
+.text-center{
+    text-align: center;
+}
+
 .container{
     max-width: 1200px;
     margin: auto;
