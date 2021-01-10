@@ -4,27 +4,64 @@
     box-sizing: border-box;
 }
 
-body{
-    font-family: 'Open Sans', sans-serif;
+body {
+    font-family: $text_font;
+    font-size: $text_size;
 }
 
-h1, h2, h3, h4, h5, h6{
-    font-family: 'Open Sans Condensed', sans-serif;
+h1, h2, h3, h4, h5, h6 {
+    font-family: $title_font;
 }
 
-.text-upper{
-    text-transform: uppercase;
-}
-
-.text-center{
-    text-align: center;
-}
-
-.container{
-    max-width: 1200px;
+.container {
+    max-width: 1280px;
     margin: auto;
 }
 
-a{
+.small-container {
+    max-width: 1020px;
+    margin: auto;
+}
+
+.container::after, .small-container::after {
+    clear: both;
+    content: '';
+    display: table;
+}
+
+a {
     text-decoration: none;
+}
+
+.button {
+    background: $main_color;
+    color: $main_bg_text_color;
+    display: inline-block;
+    font-family: "Open Sans Condensed", sans-serif;
+    font-weight: 700;
+    padding: 10px 60px;
+    text-transform: uppercase;
+}
+
+p {
+    margin: 0;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.jumbotron {
+    background-image: url('/images/jumbotron.jpg');
+    padding: 200px 0;
+}
+
+.section-title h2 {
+    margin: 0;
+    background-color: $main_color;
+    color: white;
+    display: inline-block;
+    font-size: 30px;
+    padding: 10px 30px;
+    transform: translateY(-50%);
 }

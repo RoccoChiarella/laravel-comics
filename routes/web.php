@@ -14,9 +14,25 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    $array_comics = config('comics');
+    $comics = config('comics');
     $data = [
-        'comics' => $array_comics
+        'series' => $comics
     ];
     return view('home', $data);
 })->name('homepage');
+
+Route::get('/comic/{id}', function($id) {
+    $comics = config('comics');
+    if(array_key_exists($id, $comics)) {
+        $fumetto = $comics[$id];
+        $data = [
+            'comic' => $fumetto
+        ];
+        return view('comic', $data);
+    }
+    abort(404);
+})->name('comic-details');
+
+Route::get('/contact-us', function() {
+    return view('contact');
+});
